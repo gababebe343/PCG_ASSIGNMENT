@@ -3,7 +3,7 @@ using UnityEngine;
 public class Pickup : MonoBehaviour
 {
     public float speed = 2f;
-    public int scoreValue = 5;
+    public int scoreValue = 1;
 
     void Update()
     {
@@ -15,10 +15,14 @@ public class Pickup : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log("Pickup hit: " + other.name);
+
         if (other.CompareTag("Player"))
         {
+            Debug.Log("Player detected");
             GameManager.instance.AddScore(scoreValue);
             Destroy(gameObject);
         }
     }
+
 }

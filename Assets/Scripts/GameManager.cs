@@ -8,13 +8,19 @@ public class GameManager : MonoBehaviour
     void Awake()
     {
         if (instance == null)
+        {
             instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
         else
+        {
             Destroy(gameObject);
+        }
     }
 
     public void AddScore(int amount)
     {
         score += amount;
+        Debug.Log("Score is now: " + score);
     }
 }

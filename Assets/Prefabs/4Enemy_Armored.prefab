@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4269014774952561032}
   - component: {fileID: -7464738170367212272}
   - component: {fileID: 8123236320502200765}
+  - component: {fileID: -5840909850227679932}
   m_Layer: 0
   m_Name: 4Enemy_Armored
   m_TagString: Untagged
@@ -116,3 +117,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 8
+--- !u!114 &-5840909850227679932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 119348592141772035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36b932364c0607a42954a4105004b64e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 8841747844392324971, guid: d67cffa179c125346aeb8f5b86059593, type: 3}
+  fireRate: 1.5

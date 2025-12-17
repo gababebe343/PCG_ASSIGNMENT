@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2283374759634524316}
   - component: {fileID: -2330622977726503600}
   - component: {fileID: -4145503218826824868}
+  - component: {fileID: 7121615371172057132}
   m_Layer: 0
   m_Name: 2Enemy_Medium
   m_TagString: Untagged
@@ -116,3 +117,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 4
+--- !u!114 &7121615371172057132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7611431494358333307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36b932364c0607a42954a4105004b64e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 8841747844392324971, guid: d67cffa179c125346aeb8f5b86059593, type: 3}
+  fireRate: 1.5

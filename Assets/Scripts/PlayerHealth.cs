@@ -9,13 +9,19 @@ public class PlayerHealth : MonoBehaviour
     {
         DamageDealer damageDealer = other.GetComponent<DamageDealer>();
 
-        if (damageDealer != null)
-        {
-            health -= damageDealer.damage;
-            Destroy(other.gameObject);
+        if (damageDealer == null)
+            return;
 
-            if (health <= 0)
-                SceneManager.LoadScene("GameOver");
+        health -= damageDealer.damage;
+
+        if (other.CompareTag("EnemyBullet"))
+        {
+            Destroy(other.gameObject);
+        }
+
+        if (health <= 0)
+        {
+            SceneManager.LoadScene("GameOver");
         }
     }
 }
