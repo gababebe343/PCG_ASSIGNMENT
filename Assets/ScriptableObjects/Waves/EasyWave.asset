@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6043a2671494b93469beb355739591ff, type: 3}
   m_Name: EasyWave
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 0}
-  pathPrefab: {fileID: 0}
-  speed: 0
-  count: 0
+  enemyPrefab: {fileID: 7004593644406156108, guid: b5e5f6997f2fbd24fa01c4272724a647, type: 3}
+  pathPrefab: {fileID: 4213296568020008126, guid: 7241f31ea484b3d4198fecf876e60014, type: 3}
+  speed: 2
+  count: 4

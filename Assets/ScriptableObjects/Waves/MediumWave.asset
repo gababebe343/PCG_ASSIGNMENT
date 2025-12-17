@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6043a2671494b93469beb355739591ff, type: 3}
   m_Name: MediumWave
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 0}
-  pathPrefab: {fileID: 0}
-  speed: 0
-  count: 0
+  enemyPrefab: {fileID: 7611431494358333307, guid: 569b4b799ccf7ae4d8d0e203729051a6, type: 3}
+  pathPrefab: {fileID: 3050200293119674430, guid: ec625b5236c8ccb419502a3fabc5f873, type: 3}
+  speed: 2.5
+  count: 6

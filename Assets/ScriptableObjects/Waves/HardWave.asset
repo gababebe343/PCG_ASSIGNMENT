@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6043a2671494b93469beb355739591ff, type: 3}
   m_Name: HardWave
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 0}
-  pathPrefab: {fileID: 0}
-  speed: 0
-  count: 0
+  enemyPrefab: {fileID: 2208066183687587691, guid: 747457f4c7f768a419496dfd9715b8e5, type: 3}
+  pathPrefab: {fileID: 8172370868918406037, guid: 033702853006234429d29f81c3918914, type: 3}
+  speed: 3
+  count: 7

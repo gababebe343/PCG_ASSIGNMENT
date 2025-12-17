@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3650735238350730579}
   - component: {fileID: 7059824666315583850}
+  - component: {fileID: -3729749190503724418}
   m_Layer: 0
   m_Name: 3Enemy_Heavy
   m_TagString: Untagged
@@ -87,3 +88,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-3729749190503724418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2208066183687587691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8836b2418a16d194d81394dad688819a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  path: {fileID: 0}
+  speed: 2
