@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -10,16 +11,11 @@ public class PlayerHealth : MonoBehaviour
 
         if (damageDealer != null)
         {
-            TakeDamage(damageDealer.damage);
+            health -= damageDealer.damage;
             Destroy(other.gameObject);
+
+            if (health <= 0)
+                SceneManager.LoadScene("GameOver");
         }
-    }
-
-    void TakeDamage(int damage)
-    {
-        health -= damage;
-
-        if (health <= 0)
-            Destroy(gameObject);
     }
 }
