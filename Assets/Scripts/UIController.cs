@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class UIController : MonoBehaviour
@@ -9,9 +10,20 @@ public class UIController : MonoBehaviour
 
     void Update()
     {
-        if (player != null)
+        if (player != null && healthText != null)
             healthText.text = "Health: " + player.health;
 
-        scoreText.text = "Score: " + GameManager.instance.score;
+        if (scoreText != null && GameManager.instance != null)
+            scoreText.text = "Score: " + GameManager.instance.score;
+    }
+
+    public void RestartLevel()
+    {
+        SceneManager.LoadScene("Level1");
+    }
+
+    public void LoadMenu()
+    {
+        SceneManager.LoadScene("Menu");
     }
 }
