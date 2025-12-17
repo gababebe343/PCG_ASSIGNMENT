@@ -7,21 +7,17 @@ public class PlayerHealth : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        DamageDealer damageDealer = other.GetComponent<DamageDealer>();
-
-        if (damageDealer == null)
+        if (!other.CompareTag("EnemyBullet"))
             return;
 
-        health -= damageDealer.damage;
+        DamageDealer damage = other.GetComponent<DamageDealer>();
+        if (damage == null)
+            return;
 
-        if (other.CompareTag("EnemyBullet"))
-        {
-            Destroy(other.gameObject);
-        }
+        health -= damage.damage;
+        Destroy(other.gameObject);
 
         if (health <= 0)
-        {
             SceneManager.LoadScene("GameOver");
-        }
     }
 }
