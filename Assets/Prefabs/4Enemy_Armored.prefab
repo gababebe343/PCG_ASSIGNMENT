@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5662982611685895338}
   - component: {fileID: 4269014774952561032}
   - component: {fileID: -7464738170367212272}
+  - component: {fileID: 8123236320502200765}
   m_Layer: 0
   m_Name: 4Enemy_Armored
   m_TagString: Untagged
@@ -102,3 +103,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   path: {fileID: 0}
   speed: 2
+--- !u!114 &8123236320502200765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 119348592141772035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a56575a18d47394b9c20fa26a070704, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 8
