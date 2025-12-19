@@ -1,23 +1,42 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public int health = 100;
+    public GameObject explosionPrefab;
+    bool isDead;
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (!other.CompareTag("EnemyBullet"))
+        if (isDead || GameManager.instance == null)
             return;
 
-        DamageDealer damage = other.GetComponent<DamageDealer>();
-        if (damage == null)
+        DamageDealer damageDealer = other.GetComponent<DamageDealer>();
+        if (damageDealer == null)
             return;
 
-        health -= damage.damage;
+        GetComponent<AudioSource>().Play();
+
+        GameManager.instance.DamagePlayer(damageDealer.damage);
         Destroy(other.gameObject);
 
-        if (health <= 0)
-            SceneManager.LoadScene("GameOver");
+        if (GameManager.instance.playerHealth <= 0)
+        {
+            isDead = true;
+
+            Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+
+            GetComponent<SpriteRenderer>().enabled = false;
+            GetComponent<Collider2D>().enabled = false;
+
+            StartCoroutine(GameOverDelay());
+        }
+    }
+
+    IEnumerator GameOverDelay()
+    {
+        yield return new WaitForSeconds(0.5f);
+        SceneManager.LoadScene("GameOver");
     }
 }

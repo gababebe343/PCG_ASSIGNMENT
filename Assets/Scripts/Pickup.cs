@@ -5,6 +5,14 @@ public class Pickup : MonoBehaviour
     public float speed = 2f;
     public int scoreValue = 1;
 
+    AudioSource audioSource;
+    bool collected;
+
+    void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
+
     void Update()
     {
         transform.Translate(Vector3.down * speed * Time.deltaTime);
@@ -15,14 +23,18 @@ public class Pickup : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Pickup hit: " + other.name);
+        if (collected || GameManager.instance == null)
+            return;
 
         if (other.CompareTag("Player"))
         {
-            Debug.Log("Player detected");
+            collected = true;
             GameManager.instance.AddScore(scoreValue);
-            Destroy(gameObject);
+
+            if (audioSource != null)
+                audioSource.Play();
+
+            Destroy(gameObject, 0.1f);
         }
     }
-
 }

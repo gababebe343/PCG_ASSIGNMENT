@@ -16,7 +16,7 @@ public class PickupSpawner : MonoBehaviour
     {
         float camHalfWidth = Camera.main.orthographicSize * Camera.main.aspect;
 
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < 20; i++)
         {
             float randomX = Random.Range(-camHalfWidth, camHalfWidth);
             Vector3 spawnPos = new Vector3(randomX, 6f, 0);

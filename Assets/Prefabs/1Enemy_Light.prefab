@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 5721673333781085100}
   - component: {fileID: 8071636239905402737}
   - component: {fileID: -1326628697086556840}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 1Enemy_Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -13,6 +13,8 @@ public class PlayerShooter : MonoBehaviour
         {
             Instantiate(bulletPrefab, transform.position, Quaternion.identity);
             nextFireTime = Time.time + fireRate;
+
+            GetComponent<AudioSource>().Play();
         }
     }
 }

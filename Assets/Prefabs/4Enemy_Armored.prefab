@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 9203307351102257186}
   - component: {fileID: 7797101874123153707}
   - component: {fileID: 1295511951158630868}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 4Enemy_Armored
   m_TagString: Untagged
   m_Icon: {fileID: 0}
